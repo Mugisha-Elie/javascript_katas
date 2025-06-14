@@ -1,19 +1,38 @@
-function makeLine(length) {
-  var line = "";
-  for (var j = 1; j <= length; j++) {
-    line += "* "
-  }
-  return line + "\n";
-}
-
-function buildTriangle(length){
+function triangle(length){
     let triangle = "";
-    let lineNumber = 1;
-
-    for(lineNumber = 1; lineNumber <= length; lineNumber++){
-        triangle += makeLine(lineNumber);
+    for(let i=0; i<length; i++){
+triangle += "#";
+console.log(triangle);
     }
-    return triangle
+    return 0;
 }
 
-console.log(buildTriangle(5));
+triangle(5);
+
+
+function pyramid(length){
+    let pyramid = "";
+
+    for(let i=0; i<length; i++){
+        let hashes = "#".repeat(2*i+1);
+        let spaces = " ".repeat(length-i-1);
+
+        pyramid += spaces + hashes + "\n";
+    }
+
+    return pyramid;
+
+}
+console.log(pyramid(5));
+
+function inverted(length){
+    let pyramid = ""
+    for(let i=0; i<length; i++){
+        let hashes = "#".repeat(2 * (length-i) - 1);
+        let spaces = " ".repeat(i+1);
+        pyramid += spaces + hashes + "\n";
+    }
+    return pyramid;
+}
+
+console.log(inverted(5));
