@@ -6,9 +6,19 @@ function isPrime(integer){
         }
         
     }
-    
+
     return true
 
 }
 
-isPrime(24);
+var bookTitle = "Le Petit Prince";
+console.log(bookTitle);
+
+function displayBookEnglish(){
+   var bookTitle = "The Little English";
+    console.log(bookTitle);
+}
+
+displayBookEnglish();
+console.log(bookTitle)
+
