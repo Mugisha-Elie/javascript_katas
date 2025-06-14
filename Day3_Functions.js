@@ -1,24 +1,19 @@
-function isPrime(integer){
-    for(let x=2; x<integer; x++ ){
-        if(integer % x === 0){
-            console.log(integer+ " is divisible by "+x);
-            return false;
-        }
-        
+function makeLine(length) {
+  var line = "";
+  for (var j = 1; j <= length; j++) {
+    line += "* "
+  }
+  return line + "\n";
+}
+
+function buildTriangle(length){
+    let triangle = "";
+    let lineNumber = 1;
+
+    for(lineNumber = 1; lineNumber <= length; lineNumber++){
+        triangle += makeLine(lineNumber);
     }
-
-    return true
-
+    return triangle
 }
 
-var bookTitle = "Le Petit Prince";
-console.log(bookTitle);
-
-function displayBookEnglish(){
-   var bookTitle = "The Little English";
-    console.log(bookTitle);
-}
-
-displayBookEnglish();
-console.log(bookTitle)
-
+console.log(buildTriangle(5));
