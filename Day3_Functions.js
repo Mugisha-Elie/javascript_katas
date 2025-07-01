@@ -1,5 +1,11 @@
 var donuts = ["chocolate frosted","cinnamon","glazed","sprinkled","powdered","cinnamon sugar","glazed cruller","chocolate cruller","cookies","Boston Creme"];
-console.log(donuts.length);
 
-console.log(donuts.push("Another one"));
-console.log(donuts.pop());
+
+function myAwesomeArray(element, index, array){
+    console.log("Element: " +element);
+    console.log("Index: " +index);
+    //console.log("Array: "+array);
+
+}
+
+donuts.forEach(myAwesomeArray);
